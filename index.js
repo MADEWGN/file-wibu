@@ -14,7 +14,7 @@ app.set('view engine', 'ejs');
 
 /** Web Path */
 app.get('/', (req, res) => {
-    res.render('./routers/web/otakudesu');
+    res.render('routers/web/otakudesu');
 });
 
 app.use('/komikindo', require('./routers/web/komikindo'));
