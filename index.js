@@ -13,13 +13,13 @@ app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
 /** Web Path */
-app.get('/home', (req, res) => {
-    res.render('pages/index');
+app.get('/', (req, res) => {
+    res.render('./routers/web/otakudesu');
 });
 
 app.use('/komikindo', require('./routers/web/komikindo'));
 app.use('/mangabat', require('./routers/web/mangabat'));
-app.use('/', require('./routers/web/otakudesu'));
+app.use('/otakudesu', require('./routers/web/otakudesu'));
 app.use('/komiku', require('./routers/web/komiku'));
 
 /* API Path */
